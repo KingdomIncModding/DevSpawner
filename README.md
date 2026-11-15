@@ -1,8 +1,8 @@
 # DevSpawner
 
-**Current release: 1.3.1 — for Kingdom Inc game version 1.0.14.**
+**Current release: 1.3.2 — for Kingdom Inc game version 1.0.14.**
 
-[GitHub releases](https://github.com/KingdomIncModding/DevSpawner/releases) · [Nexus Mods](https://www.nexusmods.com/kingdominc/mods/13) · Version 1.3.1
+[GitHub releases](https://github.com/KingdomIncModding/DevSpawner/releases) · [Nexus Mods](https://www.nexusmods.com/kingdominc/mods/13) · Version 1.3.2
 
 Enable Kingdom Inc's native Spawner building to spawn any item without production inputs. This is a cheat utility designed for testing, sandbox experimentation, and blueprint design.
 
@@ -43,7 +43,7 @@ Enable Kingdom Inc's native Spawner building to spawn any item without productio
 
 | Class.Method | Hook Type | Impact |
 |---|---|---|
-| GamePlayer.HasTech | Foundation hook (postfix) | Unlocks the native Spawner building when the DevSpawner research is completed. |
+| GamePlayer.HasTech | Foundation hook (filtered before-handler) | Filters native checks for `dev_item_spawner`, returns whether the modded `DevSpawner` research is unlocked, and cancels the native method. |
 | GamePlayer.FromJson | Foundation hook (postfix) | Ensures existing placed Spawners retain their functional unlocks across loaded saves. |
 | WorldFlowElement.SetElement | Foundation hook (postfix) | Attaches interactive item selection UI, item icons, and tooltips to placed Spawner nodes. |
 | DevSpawner.IconName (getter) | Foundation hook (postfix) | Displays the selected item's icon on the Spawner node dynamically. |

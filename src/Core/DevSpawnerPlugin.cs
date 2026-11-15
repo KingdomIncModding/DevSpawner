@@ -4,7 +4,7 @@ using KingdomFoundation.Api;
 
 namespace KingdomDevSpawner
 {
-    [BepInPlugin(Id, "DevSpawner", "1.3.1")]
+    [BepInPlugin(Id, "DevSpawner", "1.3.2")]
     [BepInDependency("urakka.kingdominc.foundation", "0.14.0")]
     public sealed class DevSpawnerPlugin : BaseUnityPlugin
     {
@@ -64,6 +64,9 @@ namespace KingdomDevSpawner
         void OnDestroy()
         {
             DisposeHooks();
+            SpawnerDisplay.RevertAll();
+            SpawnerPrerequisite.RestoreAll();
+            DevSpawnerEvents.ResetForUnload();
             modContext?.Dispose();
         }
     }

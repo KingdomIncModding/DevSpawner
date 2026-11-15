@@ -1,7 +1,7 @@
 {
   "id": "DevSpawner",
   "name": "DevSpawner",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "author": "Urakka",
   "description": "For Kingdom Inc game version 1.0.14. Enables Kingdom Inc's native Spawner building to spawn any item with an in-game search picker, item icons, and tooltips.",
   "repository": {
@@ -20,7 +20,7 @@
       "cheats",
       "sandbox"
     ],
-    "latestTag": "v1.3.0"
+    "latestTag": "v1.3.1"
   },
   "distribution": {
     "nexus": {
@@ -33,7 +33,8 @@
           "name": "Foundation",
           "url": "https://www.nexusmods.com/kingdominc/mods/18",
           "minimumVersion": "0.14.0",
-          "type": "nexus"
+          "type": "nexus",
+          "fileId": 8358756
         },
         {
           "name": "BepInEx 5",
@@ -64,7 +65,7 @@
     "gameIntegration": "Foundation"
   },
   "publishing": {
-    "githubReleases": "https://github.com/KingdomIncModding/DevSpawner/releases/tag/v1.3.0",
+    "githubReleases": "https://github.com/KingdomIncModding/DevSpawner/releases/tag/v1.3.1",
     "nexusMods": "https://www.nexusmods.com/kingdominc/mods/13",
     "archivePreviousReleases": false
   }
